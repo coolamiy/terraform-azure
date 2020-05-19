@@ -1,0 +1,138 @@
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) terraform apply -auto-approve
+module.linuxservers.random_id.vm-sa: Refreshing state... [id=by-5_G4N]
+azurerm_resource_group.amitvm: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources]
+module.network.data.azurerm_resource_group.network: Refreshing state...
+module.linuxservers.data.azurerm_resource_group.vm: Refreshing state...
+module.network.azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/virtualNetworks/acctvnet]
+module.linuxservers.azurerm_availability_set.vm: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Compute/availabilitySets/amitlinuxvm-avset]
+module.linuxservers.azurerm_network_security_group.vm: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkSecurityGroups/amitlinuxvm-nsg]
+module.linuxservers.azurerm_public_ip.vm[1]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-1]
+module.linuxservers.azurerm_public_ip.vm[0]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-0]
+module.linuxservers.azurerm_network_security_rule.vm: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkSecurityGroups/amitlinuxvm-nsg/securityRules/allow_remote_22_in_all]
+module.network.azurerm_subnet.subnet[0]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/virtualNetworks/acctvnet/subnets/subnet1]
+module.linuxservers.azurerm_network_interface.vm[0]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkInterfaces/amitlinuxvm-nic-0]
+module.linuxservers.azurerm_network_interface.vm[1]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkInterfaces/amitlinuxvm-nic-1]
+module.linuxservers.azurerm_network_interface_security_group_association.test[1]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkInterfaces/amitlinuxvm-nic-1|/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkSecurityGroups/amitlinuxvm-nsg]
+module.linuxservers.azurerm_network_interface_security_group_association.test[0]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkInterfaces/amitlinuxvm-nic-0|/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/networkSecurityGroups/amitlinuxvm-nsg]
+module.linuxservers.azurerm_virtual_machine.vm-linux[1]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Compute/virtualMachines/amitlinuxvm-vmLinux-1]
+module.linuxservers.azurerm_virtual_machine.vm-linux[0]: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Compute/virtualMachines/amitlinuxvm-vmLinux-0]
+module.linuxservers.azurerm_public_ip.vm[1]: Modifying... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-1]
+module.linuxservers.azurerm_public_ip.vm[0]: Modifying... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-0]
+module.linuxservers.azurerm_public_ip.vm[1]: Modifications complete after 2s [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-1]
+module.linuxservers.azurerm_public_ip.vm[0]: Modifications complete after 2s [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-0]
+
+Warning: "address_prefix": [DEPRECATED] Use the `address_prefixes` property instead.
+
+  on .terraform/modules/network/terraform-azurerm-network-3.0.1/main.tf line 15, in resource "azurerm_subnet" "subnet":
+  15: resource "azurerm_subnet" "subnet" {
+
+
+
+Apply complete! Resources: 0 added, 2 changed, 0 destroyed.
+
+Outputs:
+
+Linux_vm_public_ip_addresses = [
+  "52.149.155.127",
+  "13.90.33.35",
+]
+linux_vm_private_ips = [
+  "10.0.1.4",
+  "10.0.1.5",
+]
+linux_vm_public_dns = [
+  "amitlinuxvm-1.eastus.cloudapp.azure.com",
+  "amitlinuxvm-2.eastus.cloudapp.azure.com",
+]
+linux_vm_public_id = [
+  "/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-0",
+  "/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources/providers/Microsoft.Network/publicIPAddresses/amitlinuxvm-pip-1",
+]
+
+
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) ssh azureadmin@amitlinuxvm-1.eastus.cloudapp.azure.com
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 5.3.0-1020-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue May 19 10:40:04 UTC 2020
+
+  System load:  0.01              Processes:           109
+  Usage of /:   4.4% of 28.90GB   Users logged in:     0
+  Memory usage: 71%               IP address for eth0: 10.0.1.4
+  Swap usage:   0%
+
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue May 19 10:06:32 2020 from 109.128.157.162
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+azureadmin@amitlinuxvm-0:~$ ping 10.0.1.5
+PING 10.0.1.5 (10.0.1.5) 56(84) bytes of data.
+64 bytes from 10.0.1.5: icmp_seq=1 ttl=64 time=1.39 ms
+64 bytes from 10.0.1.5: icmp_seq=2 ttl=64 time=0.939 ms
+64 bytes from 10.0.1.5: icmp_seq=3 ttl=64 time=0.768 ms
+64 bytes from 10.0.1.5: icmp_seq=4 ttl=64 time=1.51 ms
+^C
+--- 10.0.1.5 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3056ms
+rtt min/avg/max/mdev = 0.768/1.154/1.516/0.312 ms
+
+
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) ssh azureadmin@amitlinuxvm-2.eastus.cloudapp.azure.com
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 5.3.0-1020-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue May 19 10:41:55 UTC 2020
+
+  System load:  0.0               Processes:           107
+  Usage of /:   4.3% of 28.90GB   Users logged in:     0
+  Memory usage: 66%               IP address for eth0: 10.0.1.5
+  Swap usage:   0%
+
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Tue May 19 10:27:04 2020 from 109.128.157.162
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+azureadmin@amitlinuxvm-1:~$ ping 10.0.1.4
+PING 10.0.1.4 (10.0.1.4) 56(84) bytes of data.
+64 bytes from 10.0.1.4: icmp_seq=1 ttl=64 time=0.790 ms
+64 bytes from 10.0.1.4: icmp_seq=2 ttl=64 time=0.844 ms
+64 bytes from 10.0.1.4: icmp_seq=3 ttl=64 time=0.868 ms
+^C
+--- 10.0.1.4 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2007ms
+rtt min/avg/max/mdev = 0.790/0.834/0.868/0.032 ms
+azureadmin@amitlinuxvm-1:~$
+
+
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) az resource  list -o table --resource-group example-resources
+Name                                                ResourceGroup      Location    Type                                          Status
+--------------------------------------------------  -----------------  ----------  --------------------------------------------  --------
+amitlinuxvm-avset                                   example-resources  eastus      Microsoft.Compute/availabilitySets
+osdisk-amitlinuxvm-0                                EXAMPLE-RESOURCES  eastus      Microsoft.Compute/disks
+osdisk-amitlinuxvm-1                                EXAMPLE-RESOURCES  eastus      Microsoft.Compute/disks
+amitlinuxvm-vmLinux-0                               example-resources  eastus      Microsoft.Compute/virtualMachines
+amitlinuxvm-vmLinux-0/AzureNetworkWatcherExtension  example-resources  eastus      Microsoft.Compute/virtualMachines/extensions
+amitlinuxvm-vmLinux-1                               example-resources  eastus      Microsoft.Compute/virtualMachines
+amitlinuxvm-nic-0                                   example-resources  eastus      Microsoft.Network/networkInterfaces
+amitlinuxvm-nic-1                                   example-resources  eastus      Microsoft.Network/networkInterfaces
+amitlinuxvm-nsg                                     example-resources  eastus      Microsoft.Network/networkSecurityGroups
+amitlinuxvm-pip-0                                   example-resources  eastus      Microsoft.Network/publicIPAddresses
+amitlinuxvm-pip-1                                   example-resources  eastus      Microsoft.Network/publicIPAddresses
+acctvnet                                            example-resources  eastus      Microsoft.Network/virtualNetworks
+
