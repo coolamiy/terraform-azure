@@ -112,7 +112,7 @@ Windows troubleshooting
 + Service started and localhost shows default IIS page.
 
 ![alt text][application_pool]
-[applicationpool] USerpool.png
+[applicationpool] https://github.com/coolamiy/terraform-azure/blob/master/USerpool.png
 
 ![alt text][IIS]
-[IIS] IIS.png
+[IIS] https://github.com/coolamiy/terraform-azure/blob/master/IIS.png
