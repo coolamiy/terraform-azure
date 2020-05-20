@@ -38,7 +38,7 @@ Script **runelasticandcheckhalth.sh** works on two arguments;
 
 Linux problem Solving
 =====================
-####Redis not starting.
+**Redis not starting.**
 + validated the service status ir was stopped and failing.
 + Run sudo journalctl -xe gives following ouput.
 ```commandline
