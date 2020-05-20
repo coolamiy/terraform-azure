@@ -1,4 +1,4 @@
- adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) terraform apply -auto-approve
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ docker-desktop:default) terraform apply -auto-approve
 module.linuxservers.random_id.vm-sa: Refreshing state... [id=by-5_G4N]
 azurerm_resource_group.amitvm: Refreshing state... [id=/subscriptions/af4a5398-83ac-4255-8278-1160a7168327/resourceGroups/example-resources]
 module.network.data.azurerm_resource_group.network: Refreshing state...
@@ -50,7 +50,7 @@ linux_vm_public_id = [
 ]
 
 
- adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) ssh azureadmin@amitlinuxvm-1.eastus.cloudapp.azure.com
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ docker-desktop:default) ssh azureadmin@amitlinuxvm-1.eastus.cloudapp.azure.com
 Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 5.3.0-1020-azure x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -85,7 +85,7 @@ PING 10.0.1.5 (10.0.1.5) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.768/1.154/1.516/0.312 ms
 
 
- adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) ssh azureadmin@amitlinuxvm-2.eastus.cloudapp.azure.com
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ docker-desktop:default) ssh azureadmin@amitlinuxvm-2.eastus.cloudapp.azure.com
 Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 5.3.0-1020-azure x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -120,7 +120,7 @@ rtt min/avg/max/mdev = 0.790/0.834/0.868/0.032 ms
 azureadmin@amitlinuxvm-1:~$
 
 
- adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ chwy-prod/ocp-elr-core-optum-com:443/adixit4:chwy-prod) az resource  list -o table --resource-group example-resources
+ adixit4@LAMU02Y80GMJG5J  ~/terraform  (⎈ docker-desktop:default) az resource  list -o table --resource-group example-resources
 Name                                                ResourceGroup      Location    Type                                          Status
 --------------------------------------------------  -----------------  ----------  --------------------------------------------  --------
 amitlinuxvm-avset                                   example-resources  eastus      Microsoft.Compute/availabilitySets
@@ -135,4 +135,21 @@ amitlinuxvm-nsg                                     example-resources  eastus   
 amitlinuxvm-pip-0                                   example-resources  eastus      Microsoft.Network/publicIPAddresses
 amitlinuxvm-pip-1                                   example-resources  eastus      Microsoft.Network/publicIPAddresses
 acctvnet                                            example-resources  eastus      Microsoft.Network/virtualNetworks
+
+
+ adixit4@LAMU02Y80GMJG5J  ~/terraform   master  (⎈ docker-desktop:default) ./memcpu.sh azureadmin amitlinuxvm-1.eastus.cloudapp.azure.com                                                        (master|✔)
+Memory Usage: 225/386MB (58.29%)
+Disk Usage: 102/466GB (23%)
+RECEIVED: (734.07%)MB TRANSMITTED: (0.96%)MB
+CPU Load: 0.19
+
+ adixit4@LAMU02Y80GMJG5J  ~/terraform   master ●✚  (⎈ docker-desktop:default) ./runelasticandcheckhalth.sh run                                                                                (master|●1✚3)
+checking docker on machine.
+running elasticsearch in docker..
+297e27b21ba23dc1802d8c27b534009c4c40627845fbb052c706d8f9bb2b2547
+started elasticsearch container ..
+ adixit4@LAMU02Y80GMJG5J  ~/terraform   master ●✚  (⎈ docker-desktop:default) ./runelasticandcheckhalth.sh checkstatus                                                                        (master|●1✚3)
+ElasticSearch Status :  "green"
+ adixit4@LAMU02Y80GMJG5J  ~/terraform   master ●✚  (⎈ docker-desktop:default) ./runelasticandcheckhalth.sh test                                                                               (master|●1✚3)
+Illegal Arguments passed. valid values: run and checkstatus for executing elasticsearch container and monitoring health  :: Unexpected error occured..
 
