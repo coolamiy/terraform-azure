@@ -30,7 +30,7 @@ Linux
 =====
 Elastic search Running in a docker container.
 
-Script **runelasticandcheckhalth.sh** works on two arguments;
+Script **runelasticandcheckhealth.sh** works on two arguments;
 1. with arg as run it will spin up elasticsearch 1 node cluster with port 9200 mappped to host machine.
 2. with checkstatus as argument it will check health of elasticsearch running on localhost mapped to container on 9200 port.
 
