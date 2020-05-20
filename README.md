@@ -111,8 +111,6 @@ Windows troubleshooting
 + Restart default application pool.
 + Service started and localhost shows default IIS page.
 
-![alt text][application_pool]
-[applicationpool] https://github.com/coolamiy/terraform-azure/blob/master/USerpool.png
+![Userpool image](https://github.com/coolamiy/terraform-azure/blob/master/USerpool.png)
 
-![alt text][IIS]
-[IIS] https://github.com/coolamiy/terraform-azure/blob/master/IIS.png
+![IIS image](https://github.com/coolamiy/terraform-azure/blob/master/IIS.png)
